@@ -81,12 +81,13 @@ _Please follow the setup instructions closely so that you can get everything up 
 - [ ] Implement the project on this Branch, **committing progress & changes often.**
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
-### Task 2: Project Requirements
+### Task 2: Project Requirements.
 
 Your finished project must include all of the following requirements:
 
 #### Plant List
 
+.
 Display a list of the plants from the server. This should be done in the class component `PlantList`.
 
 - [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
