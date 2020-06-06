@@ -30,13 +30,45 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+In order to build them, we first declare the component by using extend. Then, we use a constructor function to set up state. Finally, we call super() and then we render it.
+
 2. Describe the different phases of the component lifecycle.
+
+a) The Birth/Mounting Phase - Component is being built, we define the data we want to access on the constructor function, the render method is being invoked and componentDidMount gets called.
+
+b) Growth/Updating Phase - We are updating the component data, we can use setState to change it, which makes it render. We could also stop it from rendering if we wanted to by using the shouldComponentUpdate method.
+
+c) Death/Un-mounting Phase - Component gets removed from the screen, componentWillUnmount method is called.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+a) the methods used during the mounting phase are:
+-constructor()
+-getDerivedStateFromProps()
+-render()
+-componentDidMount()
+
+b) methods used during updating phase:
+
+- getDerivedStateFromProps()
+  -shouldComponentUpdate()
+  -render()
+  -getSnapshotBeforeUpdate()
+  -componentDidUpdate()
+
+c)methods used during un-mounting phase:
+-componentWillUnmount()
+
 4. Define stateful logic.
 
+It is logic that is built into a component. It usually deals with state. Some examples would be a function that handles a click event or one that sets toggle state.
+
 5. Describe how to test a React component with React Testing Library.
+   There are three main steps:
+
+- arrange - set up code so you can test it
+- act - call a method or function whose result is relevant for the test
+- assert - check if what was expected happened or not
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -81,12 +113,13 @@ _Please follow the setup instructions closely so that you can get everything up 
 - [ ] Implement the project on this Branch, **committing progress & changes often.**
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
-### Task 2: Project Requirements
+### Task 2: Project Requirements.
 
 Your finished project must include all of the following requirements:
 
 #### Plant List
 
+.
 Display a list of the plants from the server. This should be done in the class component `PlantList`.
 
 - [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
